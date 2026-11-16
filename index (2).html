@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swastika Singh | Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#14213D;--blue-dark:#14213D;--blue-light:#FBF6E9;--line:#E8D9A8;--gold:#E0A526;--on-btn:#fff;--hover:#2A3A63;--text:#1f2937;--muted:#5b6577;--bg:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--blue:#E0A526;--blue-dark:#F0C766;--blue-light:#1B2A4A;--line:#33466F;--gold:#E0A526;--on-btn:#14213D;--hover:#F0C766;--text:#E8EBF3;--muted:#A3ADC4;--bg:#0C1426;color-scheme:dark}}
+:root[data-theme="dark"]{--blue:#E0A526;--blue-dark:#F0C766;--blue-light:#1B2A4A;--line:#33466F;--gold:#E0A526;--on-btn:#14213D;--hover:#F0C766;--text:#E8EBF3;--muted:#A3ADC4;--bg:#0C1426;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 "Inter",Arial,sans-serif}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.25;margin:0}
+a{color:var(--blue)}
+.wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+.top{background:#14213D;color:#fff;padding:3rem 0 2.5rem;border-bottom:4px solid #E0A526}
+.top h1{font-size:clamp(2rem,6vw,2.8rem);margin-bottom:.75rem}
+.lead{margin:0 0 1.5rem;max-width:55ch;color:#E6E9F2}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.button{display:inline-block;padding:.6rem 1.1rem;border:2px solid var(--blue);border-radius:6px;background:var(--blue);color:var(--on-btn);font-weight:600;font-size:.95rem;text-decoration:none}
+.button:hover{background:var(--hover);border-color:var(--hover);color:var(--on-btn)}
+.button.outline,.button.outline:hover{color:var(--blue)}.button.outline{background:transparent}
+.button.outline:hover{background:var(--blue-light)}
+.top .button{background:#E0A526;border-color:#E0A526;color:#14213D}
+.top .button:hover{background:#F0C766;border-color:#F0C766;color:#14213D}
+.top .button.outline,.top .button.outline:hover{background:transparent;color:#fff;border-color:#fff}
+.top .button.outline:hover{background:rgba(255,255,255,.15)}
+.tabs{padding-top:1.5rem}
+.tabs>input{position:absolute;opacity:0;pointer-events:none}
+.tab-bar{display:flex;gap:.25rem;border-bottom:2px solid var(--line);overflow-x:auto}
+.tab-bar label{padding:.65rem 1rem;font-weight:600;font-size:.95rem;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tab-bar label:hover{color:var(--blue)}
+.panel{display:none;padding:2rem 0 2.5rem}
+#t1:checked~.panels #about,#t2:checked~.panels #experience,#t3:checked~.panels #education,#t4:checked~.panels #skills,#t5:checked~.panels #resume,#t6:checked~.panels #contact{display:block}
+#t1:checked~.tab-bar [for=t1],#t2:checked~.tab-bar [for=t2],#t3:checked~.tab-bar [for=t3],#t4:checked~.tab-bar [for=t4],#t5:checked~.tab-bar [for=t5],#t6:checked~.tab-bar [for=t6]{color:var(--blue);border-bottom-color:var(--gold)}
+#t1:focus-visible~.tab-bar [for=t1],#t2:focus-visible~.tab-bar [for=t2],#t3:focus-visible~.tab-bar [for=t3],#t4:focus-visible~.tab-bar [for=t4],#t5:focus-visible~.tab-bar [for=t5],#t6:focus-visible~.tab-bar [for=t6]{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
+.panel h2{font-size:1.6rem;color:var(--blue-dark);margin-bottom:1rem}
+.panel h3{font-size:1.1rem;color:var(--blue-dark)}
+.panel p{margin:0 0 1rem;max-width:62ch}
+#about h3{margin:1.5rem 0 .5rem}
+.list{margin:0;padding-left:1.25rem}.list li{margin-bottom:.6rem}.list li::marker{color:var(--blue)}
+.entries{list-style:none;margin:0;padding:0}
+.entries li{padding:.25rem 0 .25rem 1.1rem;margin-bottom:1.5rem;border-left:3px solid var(--gold)}
+.entries li p{margin:.25rem 0 0}
+.meta{color:var(--muted)}
+.sheet{border:1px solid var(--line);border-radius:8px;padding:1.5rem;background:var(--blue-light)}
+.sheet h2{margin-bottom:.25rem}
+.sheet h3{margin:1.25rem 0 .4rem;padding-bottom:.25rem;border-bottom:1px solid var(--line)}
+.sheet p{margin:0 0 .6rem}
+.sheet ul{margin:0;padding-left:1.25rem}.sheet li{margin-bottom:.4rem}
+.foot{padding-top:1rem;padding-bottom:2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (max-width:520px){.top{padding:2rem 0 1.75rem}.tab-bar label{padding:.6rem .75rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<h1>Swastika Singh</h1>
+<p class="lead">First-year student at IIM Bangalore and Lakshmibai College, DU. I use data to work through business cases, and I’m drawn to marketing.</p>
+<div class="actions">
+<a class="button" href="mailto:swastikarajput2006@gmail.com">Email me</a>
+<a class="button outline" href="https://www.linkedin.com/in/swastika-singh-4a274638b">View LinkedIn</a>
+</div></div></header>
+
+<main class="wrap tabs">
+<input type="radio" name="tab" id="t1" checked><input type="radio" name="tab" id="t2"><input type="radio" name="tab" id="t3"><input type="radio" name="tab" id="t4"><input type="radio" name="tab" id="t5"><input type="radio" name="tab" id="t6">
+<nav class="tab-bar" aria-label="Resume sections">
+<label for="t1">About</label><label for="t2">Experience</label><label for="t3">Education</label><label for="t4">Skills</label><label for="t5">Resume</label><label for="t6">Contact</label>
+</nav>
+<div class="panels">
+
+<section class="panel" id="about">
+<h2>About me</h2>
+<p>I’m a first-year student at IIM Bangalore and Lakshmibai College, University of Delhi. I like working through business cases with data, and I’m drawn to marketing.</p>
+<p>My background cuts across science, humanities and commerce. I studied science in Class 12 and have a solid grounding in it. I’m now pursuing a BA with economics as my major alongside a BBA at IIM Bangalore. Because I’ve learned in all three streams, I can look at a problem from more than one side and think beyond the usual boundaries.</p>
+<p>I’ve built practical experience outside the classroom too. In the marketing and sponsorship department of E-PARCUS, I got first-hand groundwork experience. In the National Service Scheme, I learned to manage people and tasks. I’ve also taken part in many case competitions, which taught me to work in a team, analyse data and deliver under pressure.</p>
+<p>I’ve done all of this at the same time, which has made me adaptable and quick to learn. I’m comfortable moving between fields, and I bring that range to every team I join.</p>
+<h3>What I’m looking for</h3>
+<ul class="list"><li>Fields: market research and analytics, and business development.</li><li>Currently targeting internships, and open to internship opportunities across these areas.</li></ul>
+</section>
+
+<section class="panel" id="experience">
+<h2>Experience</h2>
+<ul class="entries">
+<li><h3>Policy Prism 2.0</h3><p class="meta">Run by IMI Delhi. Runner-up.</p><p>Role: data analysis and research.</p></li>
+<li><h3>Case competition: Ruse and Retribution</h3><p class="meta">Run by Kirori Mal College, DU. Reached the final 4 out of 1,069.</p><p>I worked in a team and did the calculations and data analysis for the cases.</p></li>
+<li><h3>Case competition: MarketSphere</h3><p class="meta">Run by Christ University. Finalist.</p></li>
+<li><h3>E-PARCUS, the economics society of Lakshmibai College</h3><p>Member of the marketing and sponsorship department.</p></li>
+<li><h3>National Service Scheme, Delhi University</h3><p>Member. The NSS does social service.</p></li>
+</ul>
+</section>
+
+<section class="panel" id="education">
+<h2>Education</h2>
+<ul class="entries">
+<li><h3>BBA in Digital Business Entrepreneurship</h3><p class="meta">IIM Bangalore, 2026 to 2029</p></li>
+<li><h3>BA</h3><p class="meta">Lakshmibai College, University of Delhi</p></li>
+<li><h3>Class 12</h3><p class="meta">70.9%</p></li>
+<li><h3>Class 10</h3><p class="meta">84.4%</p></li>
+</ul>
+</section>
+
+<section class="panel" id="skills">
+<h2>Skills</h2>
+<ul class="list">
+<li><strong>Entrepreneurship:</strong> BBA in Digital Business Entrepreneurship.</li>
+<li><strong>Marketing management:</strong> E-PARCUS marketing and sponsorship department.</li>
+<li><strong>Data analysis:</strong> Ruse and Retribution and Policy Prism 2.0.</li>
+<li><strong>Business communication:</strong> working in teams on case competitions.</li>
+<li><strong>Strategic thinking:</strong> working through business cases.</li>
+<li><strong>Spanish:</strong> basic. I can understand and speak it.</li>
+</ul>
+</section>
+
+<section class="panel" id="resume">
+<div class="sheet">
+<h2>Swastika Singh</h2>
+<p class="meta">swastikarajput2006@gmail.com | linkedin.com/in/swastika-singh-4a274638b</p>
+<p>First-year student at IIM Bangalore and Lakshmibai College, DU. I use data to work through business cases, and I’m drawn to marketing.</p>
+<p><strong>Career objective:</strong> Market research and analytics, and business development. Currently targeting internships.</p>
+<h3>Experience</h3>
+<ul>
+<li><strong>Policy Prism 2.0</strong>, run by IMI Delhi. Runner-up. Role: data analysis and research.</li>
+<li><strong>Case competition: Ruse and Retribution</strong>, run by Kirori Mal College, DU. Reached the final 4 out of 1,069. Did the calculations and data analysis for the cases.</li>
+<li><strong>Case competition: MarketSphere</strong>, run by Christ University. Finalist.</li>
+<li><strong>E-PARCUS</strong>, the economics society of Lakshmibai College. Member of the marketing and sponsorship department.</li>
+<li><strong>National Service Scheme</strong>, Delhi University. Member.</li>
+</ul>
+<h3>Education</h3>
+<ul>
+<li>BBA in Digital Business Entrepreneurship, IIM Bangalore, 2026 to 2029.</li>
+<li>BA, Lakshmibai College, University of Delhi.</li>
+<li>Class 12: 70.9%. Class 10: 84.4%.</li>
+</ul>
+<h3>Skills</h3>
+<ul>
+<li>Entrepreneurship, marketing management, data analysis, business communication, strategic thinking.</li>
+<li>Spanish: basic, I can understand and speak it.</li>
+</ul>
+</div>
+</section>
+
+<section class="panel" id="contact">
+<h2>Contact</h2>
+<p>Write to me at <a href="mailto:swastikarajput2006@gmail.com">swastikarajput2006@gmail.com</a>.</p>
+<div class="actions">
+<a class="button" href="mailto:swastikarajput2006@gmail.com?subject=Internship%20opportunity">Email me about an internship</a>
+<a class="button outline" href="mailto:swastikarajput2006@gmail.com?subject=Let%27s%20collaborate">Email me to collaborate</a>
+<a class="button outline" href="https://www.linkedin.com/in/swastika-singh-4a274638b">View LinkedIn</a>
+</div>
+</section>
+
+</div>
+</main>
+<footer class="wrap foot"><p>Swastika Singh</p></footer>
+</body>
+</html>
